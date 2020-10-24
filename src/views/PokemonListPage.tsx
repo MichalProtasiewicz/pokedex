@@ -1,7 +1,7 @@
 import React from 'react';
 import './PokemonListPage.scss';
 import { connect } from 'react-redux';
-import PokemonCard from '../components/molecules/PokemonCard/PokemonCard';
+import PokemonCard from '../components/PokemonCard';
 
 function PokemonListPage({pokemons}: any) {
   return (

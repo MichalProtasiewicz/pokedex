@@ -2,7 +2,7 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var react_dom_1 = require("react-dom");
-require("./index.css");
+require("./index.scss");
 var Root_1 = require("./views/Root");
 var serviceWorker = require("./serviceWorker");
 var react_redux_1 = require("react-redux");

@@ -14,7 +14,7 @@ exports.__esModule = true;
 var react_1 = require("react");
 require("./PokemonListPage.scss");
 var react_redux_1 = require("react-redux");
-var PokemonCard_1 = require("../components/molecules/PokemonCard/PokemonCard");
+var PokemonCard_1 = require("../components/PokemonCard");
 function PokemonListPage(_a) {
     var pokemons = _a.pokemons;
     return (react_1["default"].createElement("div", { className: "grid" }, pokemons.map(function (pokemon) {
