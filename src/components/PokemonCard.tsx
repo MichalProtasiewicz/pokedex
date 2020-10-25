@@ -1,5 +1,4 @@
 import React from 'react';
-import './PokemonCard.scss';
 import {Link} from "react-router-dom";
 
 interface PokemonCardProps {

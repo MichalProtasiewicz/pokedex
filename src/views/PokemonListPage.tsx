@@ -1,15 +1,34 @@
-import React from 'react';
-import './PokemonListPage.scss';
+import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import PokemonCard from '../components/PokemonCard';
 
+
 function PokemonListPage({pokemons}: any) {
+  const [searchText, setSearchText] = useState("");
+
+  const results = !searchText
+    ? pokemons
+    : pokemons.filter((pokemon: any) =>
+        pokemon.name.toLowerCase().includes(searchText.toLocaleLowerCase()) ||
+        pokemon.id.toString().includes(searchText) ||
+        pokemon.types[0].type.name.toLowerCase().includes(searchText.toLocaleLowerCase()) ||
+        (pokemon.types[1]) && (pokemon.types[1].type.name.toLowerCase().includes(searchText.toLocaleLowerCase()))
+      );
+
+  const handleChange = (e: any) => {
+    setSearchText(e.target.value);
+  }
   return (
+    <>
+    <h1>Pokemon List</h1>
+    <p>You can search pokemons by name, id or type.</p>
+    <input type="text" placeholder="Search..." value={searchText} onChange={handleChange} />
     <div className="grid">
-      {pokemons.map((pokemon: any) =>{
-        return <PokemonCard key={pokemon.id} {...pokemon} />
-      })}
+      {results.map((pokemon: any) => {
+      return <PokemonCard key={pokemon.id} {...pokemon} />
+    })}
     </div>
+    </>
   );
 }
 
