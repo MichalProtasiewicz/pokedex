@@ -15,6 +15,7 @@ var Root = function (_a) {
         }
     }, []);
     return (react_1["default"].createElement(react_router_dom_1.BrowserRouter, null,
+        (localStorage.getItem("user") === null) ? react_1["default"].createElement(react_router_dom_1.Redirect, { to: '/login' }) : react_1["default"].createElement(react_router_dom_1.Redirect, { to: '/' }),
         react_1["default"].createElement(react_router_dom_1.Switch, null,
             react_1["default"].createElement(react_router_dom_1.Route, { exact: true, path: '/', component: PokemonListPage_1["default"] }),
             react_1["default"].createElement(react_router_dom_1.Route, { exact: true, path: '/login', component: LoginPage_1["default"] }),

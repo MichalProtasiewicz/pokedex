@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PokemonCard from '../components/PokemonCard';
 
 
@@ -21,6 +22,7 @@ function PokemonListPage({pokemons}: any) {
   return (
     <>
     <h1>Pokemon List</h1>
+    <Link className='button' to='/login' onClick={()=> localStorage.removeItem('user')}>Logout</Link>
     <p>You can search pokemons by name, id or type.</p>
     <input type="text" placeholder="Search..." value={searchText} onChange={handleChange} />
     <div className="grid">
