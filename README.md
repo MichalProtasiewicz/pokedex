@@ -3,7 +3,7 @@
 Dev&Deliver JS Recruitment Task.
 PokéAPI - Pokémon API https://pokeapi.co/
 
-Live:
+Live: https://pookedex.herokuapp.com/
 
 
 Install dependencies:
