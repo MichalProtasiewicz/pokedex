@@ -11,10 +11,10 @@ const Root = ({fetchPokemon}: any) => {
     for(let i=1; i<=151; i++){
       fetchPokemon(i)
     }
-  }, []);
+  }, [fetchPokemon]);
   return(
     <BrowserRouter>
-    {(localStorage.getItem("user") === null) ? <Redirect to='/login' /> : <Redirect to='/' />}
+    {(localStorage.getItem("user") === null) && <Redirect to='/login' />}
       <Switch>
         <Route exact path='/' component={PokemonListPage} />
         <Route exact path='/login' component={LoginPage}/>
@@ -24,9 +24,8 @@ const Root = ({fetchPokemon}: any) => {
   );
 }
 
-const mapDispatchToProps = (dispatch: any) => ({
-  fetchPokemon: (id: any) => dispatch(fetchItemsAction(id)),
+const mapDispatchToProps = (dispatch: Function) => ({
+  fetchPokemon: (id: number) => dispatch(fetchItemsAction(id)),
 });
 
 export default connect(null, mapDispatchToProps)(Root);
-
