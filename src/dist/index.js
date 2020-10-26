@@ -6,6 +6,5 @@ require("./index.scss");
 var Root_1 = require("./views/Root");
 var react_redux_1 = require("react-redux");
 var store_1 = require("./store");
-react_dom_1["default"].render(react_1["default"].createElement(react_1["default"].StrictMode, null,
-    react_1["default"].createElement(react_redux_1.Provider, { store: store_1["default"] },
-        react_1["default"].createElement(Root_1["default"], null))), document.getElementById('root'));
+react_dom_1["default"].render(react_1["default"].createElement(react_redux_1.Provider, { store: store_1["default"] },
+    react_1["default"].createElement(Root_1["default"], null)), document.getElementById('root'));
