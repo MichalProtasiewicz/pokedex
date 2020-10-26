@@ -8,10 +8,10 @@ Live: https://pookedex.herokuapp.com/
 
 Install dependencies:
 
-### `yarn install` or `npm install`
+ `yarn install` or `npm install`
 
 Start application:
 
-### `yarn start` or `npm start`
+ `yarn start` or `npm start`
 
 Requirements: Node.js, NPM or Yarn
